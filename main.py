@@ -24,7 +24,6 @@ class_subject_periods = {
     "Class 7A": {"Mathematics": 6, "Science": 6, "English": 6, "Social Studies": 6, "Computer Science": 4, "Physical Education": 2},
     "Class 7B": {"Mathematics": 6, "Science": 6, "English": 6, "Social Studies": 6, "Computer Science": 4, "Physical Education": 2}
 }
-
 # Teachers and their teaching capabilities
 # {teacher_name: [list_of_subjects_they_can_teach]}
 teachers = {
@@ -54,7 +53,8 @@ def generate_timetable():
     """
     # Initialize an empty timetable
     timetable = {day: {period: {} for period in range(1, periods_per_day + 1)} for day in days_of_week}
-    
+    if validate_timetable(timetable)==True:
+        for 
     # TODO: Implement the timetable generation algorithm
     # 1. Check if a valid timetable is possible with the given constraints
     # 2. Assign subjects and teachers to periods for each class
@@ -72,6 +72,8 @@ def display_timetable(timetable):
     """
     # TODO: Implement timetable display logic
     # Display the timetable for each class
+    for i in range(1,5):
+        classes[i]
     # Display the timetable for each teacher
     pass
 
@@ -89,10 +91,14 @@ def validate_timetable(timetable):
     """
     # TODO: Implement validation logic
     # Check if all classes have their required number of periods for each subject
+    for i in range(1,5):
+        if class_subject_periods{i:{[subject_name for subject_name in subjects]}}!=0:
+            return False
     # Check if teachers are not double-booked
+        
     # Check if teachers are only teaching subjects they can teach
-    
-    return False, "To be implemented"
+
+    return True, "To be implemented"
 
 
 def main():
